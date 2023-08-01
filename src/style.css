@@ -51,6 +51,10 @@ nav li {
 }
 
 #content {
+	display: grid;
+}
+
+#home {
 	padding: 2rem;
 	display: grid;
 	place-items: center;
@@ -108,4 +112,12 @@ nav li {
 
 .hours {
 	font-size: 1.2rem;
+}
+
+[data-tab-content] {
+	display: none;
+}
+
+.active[data-tab-content] {
+	display: block;
 }
