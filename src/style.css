@@ -1,3 +1,5 @@
+@import "./reset.css";
+
 :root {
 	--accent: #dbb8bd;
 	--text: #f0e0e3;
@@ -43,6 +45,7 @@ nav ul {
 	list-style: none;
 	display: flex;
 	margin-left: auto;
+	align-items: center;
 }
 
 nav li {
@@ -51,10 +54,6 @@ nav li {
 }
 
 #content {
-	display: grid;
-}
-
-#home {
 	padding: 2rem;
 	display: grid;
 	place-items: center;
@@ -119,5 +118,5 @@ nav li {
 }
 
 .active[data-tab-content] {
-	display: block;
+	display: grid;
 }

@@ -10,24 +10,44 @@ export const renderHomeTab = (() => {
 
 	const heroSection = document.createElement("div");
 	heroSection.classList.add("hero");
-	heroSection.innerHTML = `
-        <h1>Come on down for some delicious cuisine!</h1>
-        <p>Tasty and affordable!</p>
-        <div class="btn-container">
-            <button data-tab-target="#home" class="order-now-btn">Order Now</button>
-        </div>
-    `;
+
+	const heroTitle = document.createElement("h1");
+	heroTitle.textContent = "Come on down for some delicious cuisine!";
+	heroSection.appendChild(heroTitle);
+
+	const heroParagraph = document.createElement("p");
+	heroParagraph.textContent = "Tasty and affordable!";
+	heroSection.appendChild(heroParagraph);
+
+	const btnContainer = document.createElement("div");
+	btnContainer.classList.add("btn-container");
+
+	const orderButton = document.createElement("button");
+	orderButton.setAttribute("data-tab-target", "#home");
+	orderButton.classList.add("order-now-btn");
+	orderButton.textContent = "Order Now";
+	btnContainer.appendChild(orderButton);
+
+	heroSection.appendChild(btnContainer);
+
 	contentWrapper.appendChild(heroSection);
 
 	const infoSection = document.createElement("div");
 	infoSection.classList.add("info");
-	infoSection.innerHTML = `
-        <div class="address">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique maxime quisquam veniam unde?
-        </div>
-        <div class="hours">Lorem ipsum dolor sit, amet</div>
-    `;
+
+	const addressDiv = document.createElement("div");
+	addressDiv.classList.add("address");
+	addressDiv.textContent =
+		"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique maxime quisquam veniam unde?";
+	infoSection.appendChild(addressDiv);
+
+	const hoursDiv = document.createElement("div");
+	hoursDiv.classList.add("hours");
+	hoursDiv.textContent = "Lorem ipsum dolor sit, amet";
+	infoSection.appendChild(hoursDiv);
+
 	contentWrapper.appendChild(infoSection);
+
 	content.appendChild(home);
 	home.appendChild(contentWrapper);
 })();
