@@ -1,8 +1,10 @@
 import "./style.css";
-import { renderHeader } from "./header";
-import { renderHomeTab } from "./home";
-import { renderMenuTab } from "./menu";
-import { renderContactTab } from "./contact";
+
+import "./header";
+
+import "./tabs/home";
+import "./tabs/menu";
+import "./tabs/contact";
 
 const tabs = document.querySelectorAll("[data-tab-target]");
 const tabContents = document.querySelectorAll("[data-tab-content]");

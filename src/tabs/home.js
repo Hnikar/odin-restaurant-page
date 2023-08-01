@@ -2,6 +2,7 @@ export const renderHomeTab = (() => {
 	const home = document.createElement("div");
 	home.setAttribute("id", "home");
 	home.setAttribute("data-tab-content", "");
+	home.classList.add("active");
 
 	const content = document.getElementById("content");
 
@@ -12,11 +13,11 @@ export const renderHomeTab = (() => {
 	heroSection.classList.add("hero");
 
 	const heroTitle = document.createElement("h1");
-	heroTitle.textContent = "Come on down for some delicious cuisine!";
+	heroTitle.textContent = "Savor the Flavors, Experience the Passion!";
 	heroSection.appendChild(heroTitle);
 
 	const heroParagraph = document.createElement("p");
-	heroParagraph.textContent = "Tasty and affordable!";
+	heroParagraph.textContent = "Discover Your Culinary Adventure";
 	heroSection.appendChild(heroParagraph);
 
 	const btnContainer = document.createElement("div");
@@ -37,13 +38,12 @@ export const renderHomeTab = (() => {
 
 	const addressDiv = document.createElement("div");
 	addressDiv.classList.add("address");
-	addressDiv.textContent =
-		"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique maxime quisquam veniam unde?";
+	addressDiv.textContent = "123 Main Street, City, Country";
 	infoSection.appendChild(addressDiv);
 
 	const hoursDiv = document.createElement("div");
 	hoursDiv.classList.add("hours");
-	hoursDiv.textContent = "Lorem ipsum dolor sit, amet";
+	hoursDiv.textContent = "Mon-Sat:       8:00 - 22:00";
 	infoSection.appendChild(hoursDiv);
 
 	contentWrapper.appendChild(infoSection);

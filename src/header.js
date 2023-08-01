@@ -2,16 +2,35 @@ export const renderHeader = (() => {
 	const root = document.body;
 
 	const header = document.createElement("header");
-	header.innerHTML = `
-        <nav>
-            <h2>Name</h2>
-            <ul>
-                <li data-tab-target="#home" class="tab-home">Home</li>
-                <li data-tab-target="#menu" class="tab-menu"">Menu</li>
-                <li data-tab-target="#contact" class="tab-contact"">Contacts</li>
-            </ul>
-        </nav>
-    `;
+
+	const nav = document.createElement("nav");
+
+	const h2 = document.createElement("h2");
+	h2.textContent = "Default Restaurant";
+	nav.appendChild(h2);
+
+	const ul = document.createElement("ul");
+
+	const liHome = document.createElement("li");
+	liHome.setAttribute("data-tab-target", "#home");
+	liHome.classList.add("tab-home");
+	liHome.textContent = "Home";
+	ul.appendChild(liHome);
+
+	const liMenu = document.createElement("li");
+	liMenu.setAttribute("data-tab-target", "#menu");
+	liMenu.classList.add("tab-menu");
+	liMenu.textContent = "Menu";
+	ul.appendChild(liMenu);
+
+	const liContact = document.createElement("li");
+	liContact.setAttribute("data-tab-target", "#contact");
+	liContact.classList.add("tab-contact");
+	liContact.textContent = "Contacts";
+	ul.appendChild(liContact);
+
+	nav.appendChild(ul);
+	header.appendChild(nav);
 	root.appendChild(header);
 
 	const content = document.createElement("div");
